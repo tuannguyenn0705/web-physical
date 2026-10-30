@@ -1,0 +1,78 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 520" width="800" height="520">
+  <defs>
+    <linearGradient id="bgDark" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0E0F12"/>
+      <stop offset="100%" stop-color="#050607"/>
+    </linearGradient>
+    <radialGradient id="greenGlow" cx="15%" cy="80%" r="50%">
+      <stop offset="0%" stop-color="#22C55E" stop-opacity="0.18"/>
+      <stop offset="100%" stop-color="#050607" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="520" rx="32" fill="url(#bgDark)"/>
+  <rect width="800" height="520" rx="32" fill="url(#greenGlow)"/>
+  
+  <!-- Outer Border -->
+  <rect x="2" y="2" width="796" height="516" rx="30" fill="none" stroke="#27272A" stroke-width="2"/>
+
+  <!-- Top Micro Nav -->
+  <g transform="translate(60, 45)">
+    <text x="0" y="14" font-family="'Courier New', monospace" font-size="12" fill="#52525B" letter-spacing="2">01 ARCHITECTURE // MISSION CRITICAL</text>
+    <text x="560" y="14" font-family="'Courier New', monospace" font-size="12" fill="#52525B" letter-spacing="2">SYS.2026</text>
+    
+    <!-- 3x3 Dot Grid in top right -->
+    <g transform="translate(650, 0)">
+      <circle cx="5" cy="5" r="2.5" fill="#4ADE80"/>
+      <circle cx="15" cy="5" r="2.5" fill="#4ADE80"/>
+      <circle cx="25" cy="5" r="2.5" fill="#4ADE80"/>
+      <circle cx="5" cy="15" r="2.5" fill="#4ADE80"/>
+      <circle cx="15" cy="15" r="2.5" fill="#4ADE80"/>
+      <circle cx="25" cy="15" r="2.5" fill="#4ADE80"/>
+      <circle cx="5" cy="25" r="2.5" fill="#4ADE80"/>
+      <circle cx="15" cy="25" r="2.5" fill="#4ADE80"/>
+      <circle cx="25" cy="25" r="2.5" fill="#4ADE80"/>
+    </g>
+  </g>
+
+  <!-- Main Headline -->
+  <g transform="translate(60, 130)">
+    <text x="0" y="50" font-family="'Inter', -apple-system, sans-serif" font-size="46" font-weight="700" fill="#FFFFFF" letter-spacing="-0.02em">We build</text>
+    
+    <!-- Sleek pill icon in headline -->
+    <rect x="200" y="16" width="60" height="38" rx="19" fill="#27272A" stroke="#3F3F46" stroke-width="2"/>
+    <circle cx="230" cy="35" r="8" fill="#FFFFFF"/>
+    
+    <text x="275" y="50" font-family="'Inter', -apple-system, sans-serif" font-size="46" font-weight="700" fill="#FFFFFF" letter-spacing="-0.02em">systems</text>
+    <text x="0" y="110" font-family="'Inter', -apple-system, sans-serif" font-size="46" font-weight="700" fill="#FFFFFF" letter-spacing="-0.02em">teams actually run,</text>
+    
+    <text x="0" y="170" font-family="'Inter', -apple-system, sans-serif" font-size="46" font-weight="700" fill="#FFFFFF" letter-spacing="-0.02em">scale, and trust.</text>
+  </g>
+
+  <!-- Paragraph & Micro Tag -->
+  <g transform="translate(60, 340)">
+    <text x="0" y="20" font-family="'Inter', sans-serif" font-size="16" fill="#A1A1AA" font-weight="300">Strategy, interface design, and production delivery for</text>
+    <text x="0" y="46" font-family="'Inter', sans-serif" font-size="16" fill="#A1A1AA" font-weight="300">enterprises operating modern AI workflows.</text>
+  </g>
+
+  <!-- Bottom Interactive Tags & Radar Icon -->
+  <g transform="translate(60, 420)">
+    <!-- Radar Reticle Icon -->
+    <g transform="translate(0, 0)">
+      <circle cx="25" cy="25" r="22" stroke="#22C55E" stroke-width="1.5" fill="none" opacity="0.6"/>
+      <circle cx="25" cy="25" r="14" stroke="#22C55E" stroke-width="1.5" fill="none"/>
+      <circle cx="25" cy="25" r="4" fill="#22C55E"/>
+      <line x1="25" y1="0" x2="25" y2="50" stroke="#22C55E" stroke-width="1.2" opacity="0.4"/>
+      <line x1="0" y1="25" x2="50" y2="25" stroke="#22C55E" stroke-width="1.2" opacity="0.4"/>
+    </g>
+
+    <!-- Neon Button Tag -->
+    <rect x="75" y="8" width="130" height="34" rx="8" fill="#22C55E"/>
+    <text x="96" y="30" font-family="'Inter', sans-serif" font-size="13" font-weight="700" fill="#000000">Start Project</text>
+
+    <!-- Ghost Tag -->
+    <rect x="220" y="8" width="150" height="34" rx="8" fill="none" stroke="#3F3F46" stroke-width="1.5"/>
+    <text x="245" y="30" font-family="'Inter', sans-serif" font-size="13" font-weight="500" fill="#D4D4D8">See the Build Specs</text>
+  </g>
+</svg>

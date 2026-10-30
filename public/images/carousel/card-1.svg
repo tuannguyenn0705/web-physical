@@ -1,0 +1,71 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 520" width="800" height="520">
+  <defs>
+    <linearGradient id="bgLight" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FDFCF7"/>
+      <stop offset="100%" stop-color="#F4EFE6"/>
+    </linearGradient>
+    <linearGradient id="lampGlow" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#D97706" stop-opacity="0.4"/>
+      <stop offset="100%" stop-color="#F59E0B" stop-opacity="0"/>
+    </linearGradient>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="12" stdDeviation="16" flood-color="#000" flood-opacity="0.08"/>
+    </filter>
+  </defs>
+
+  <!-- Background Base -->
+  <rect width="800" height="520" rx="32" fill="url(#bgLight)"/>
+  
+  <!-- Subtle border -->
+  <rect x="2" y="2" width="796" height="516" rx="30" fill="none" stroke="#E5E0D4" stroke-width="2"/>
+
+  <!-- Left Content: Editorial Copy -->
+  <g transform="translate(60, 80)">
+    <!-- Brand / Mini Header -->
+    <g transform="translate(0, 0)">
+      <rect width="28" height="28" rx="8" fill="#111827"/>
+      <path d="M7 10 L14 7 L21 10 L14 21 Z" fill="#F97316"/>
+      <text x="38" y="20" font-family="'Inter', -apple-system, sans-serif" font-size="16" font-weight="700" fill="#1F2937">Taste Skill</text>
+    </g>
+
+    <!-- Main Headline -->
+    <text x="0" y="120" font-family="'Playfair Display', Georgia, serif" font-size="52" font-weight="700" line-height="1.1" fill="#111827">Less slop,</text>
+    <text x="0" y="180" font-family="'Playfair Display', Georgia, serif" font-size="52" font-weight="700" fill="#111827">designs pop</text>
+
+    <!-- Subtext -->
+    <text x="0" y="240" font-family="'Inter', sans-serif" font-size="17" fill="#6B7280" font-weight="400">Pure handcrafted aesthetics.</text>
+    <text x="0" y="268" font-family="'Inter', sans-serif" font-size="17" fill="#6B7280" font-weight="400">Zero generic AI slop frontend.</text>
+
+    <!-- Applied Badge -->
+    <g transform="translate(0, 315)">
+      <rect width="210" height="42" rx="21" fill="#FFFFFF" stroke="#FDBA74" stroke-width="1.5" filter="url(#shadow)"/>
+      <circle cx="24" cy="21" r="9" fill="#FFEDD5"/>
+      <path d="M20 21 L23 24 L28 18" stroke="#EA580C" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+      <text x="42" y="26" font-family="'Inter', sans-serif" font-size="14" font-weight="600" fill="#C2410C">Taste Skill applied</text>
+    </g>
+  </g>
+
+  <!-- Right Visual: Interior Modern Lamp & Chair Illustration -->
+  <g transform="translate(480, 50)">
+    <!-- Background Frame -->
+    <rect width="260" height="420" rx="24" fill="#EAE4D7" opacity="0.6"/>
+    
+    <!-- Lamp Cord & Shade -->
+    <line x1="130" y1="0" x2="130" y2="100" stroke="#78716C" stroke-width="2.5"/>
+    <path d="M90 140 Q130 90 170 140 Z" fill="#D97706"/>
+    <!-- Lamp Light Cone -->
+    <polygon points="95,140 165,140 210,300 50,300" fill="url(#lampGlow)" opacity="0.5"/>
+
+    <!-- Minimalist Chair -->
+    <ellipse cx="130" cy="350" rx="70" ry="18" fill="#1C1917"/>
+    <rect x="75" y="260" width="110" height="90" rx="16" fill="#292524"/>
+    <line x1="75" y1="350" x2="60" y2="400" stroke="#1C1917" stroke-width="4" stroke-linecap="round"/>
+    <line x1="185" y1="350" x2="200" y2="400" stroke="#1C1917" stroke-width="4" stroke-linecap="round"/>
+    <line x1="110" y1="355" x2="105" y2="405" stroke="#1C1917" stroke-width="3.5" stroke-linecap="round"/>
+    <line x1="150" y1="355" x2="155" y2="405" stroke="#1C1917" stroke-width="3.5" stroke-linecap="round"/>
+
+    <!-- Small plant vase on table -->
+    <rect x="20" y="320" width="30" height="80" rx="6" fill="#D6D3D1"/>
+    <path d="M35 320 Q25 270 15 260 M35 300 Q45 260 55 250" stroke="#15803D" stroke-width="2" fill="none" stroke-linecap="round"/>
+  </g>
+</svg>

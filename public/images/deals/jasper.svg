@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 160" width="160" height="160">
+  <rect width="160" height="160" rx="16" fill="#FFF1F2"/>
+  <circle cx="80" cy="68" r="34" fill="#E11D48"/>
+  <text x="80" y="77" text-anchor="middle" fill="#FFFFFF" font-family="Inter, sans-serif" font-weight="800" font-size="26">J</text>
+  <text x="80" y="128" text-anchor="middle" fill="#881337" font-family="Inter, sans-serif" font-weight="800" font-size="18">JASPER AI</text>
+</svg>

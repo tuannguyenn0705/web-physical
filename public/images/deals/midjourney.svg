@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 160" width="160" height="160">
+  <rect width="160" height="160" rx="16" fill="#EEF2FF"/>
+  <path d="M44 96 L72 42 L98 96 Z" fill="#4F46E5"/>
+  <path d="M78 96 L98 58 L118 96 Z" fill="#818CF8"/>
+  <text x="80" y="130" text-anchor="middle" fill="#1E1B4B" font-family="Inter, sans-serif" font-weight="800" font-size="16">MIDJOURNEY</text>
+</svg>

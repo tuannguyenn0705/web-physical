@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 160" width="160" height="160">
+  <rect width="160" height="160" rx="16" fill="#F0FDFA"/>
+  <circle cx="80" cy="68" r="32" fill="#0D9488"/>
+  <path d="M80 44 L80 92 M56 68 L104 68 M63 51 L97 85 M97 51 L63 85" stroke="#FFFFFF" stroke-width="4" stroke-linecap="round"/>
+  <text x="80" y="128" text-anchor="middle" fill="#134E4A" font-family="Inter, sans-serif" font-weight="800" font-size="16">PERPLEXITY</text>
+</svg>

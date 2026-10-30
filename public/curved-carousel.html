@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Taste Skill - Infinite Curved Path Carousel</title>
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500&display=swap" rel="stylesheet">
+    
+    <!-- GSAP & MotionPathPlugin CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/MotionPathPlugin.min.js"></script>
+
+    <style>
+        *, *::before, *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background-color: #FAF9F6;
+            color: #1a1a1a;
+            min-height: 100vh;
+            overflow-x: hidden;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* Hero Wrapper */
+        .hero-section {
+            position: relative;
+            width: 100%;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            padding: 4rem 2rem;
+            overflow: hidden;
+        }
+
+        /* Ambient Glow Blobs */
+        .ambient-blob-1 {
+            position: absolute;
+            top: -15%;
+            left: -10%;
+            width: 45vw;
+            height: 45vw;
+            background: radial-gradient(circle, rgba(254, 215, 170, 0.45) 0%, rgba(254, 215, 170, 0) 70%);
+            border-radius: 50%;
+            pointer-events: none;
+            filter: blur(80px);
+        }
+
+        .ambient-blob-2 {
+            position: absolute;
+            bottom: -20%;
+            right: -10%;
+            width: 50vw;
+            height: 50vw;
+            background: radial-gradient(circle, rgba(224, 231, 255, 0.5) 0%, rgba(224, 231, 255, 0) 70%);
+            border-radius: 50%;
+            pointer-events: none;
+            filter: blur(90px);
+        }
+
+        .container {
+            max-width: 1380px;
+            width: 100%;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1.1fr 1fr;
+            gap: 3rem;
+            align-items: center;
+            position: relative;
+            z-index: 2;
+        }
+
+        /* Left Editorial Copy */
+        .hero-copy {
+            max-width: 620px;
+        }
+
+        .badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(8px);
+            border: 1px solid rgba(0, 0, 0, 0.08);
+            border-radius: 9999px;
+            padding: 0.4rem 1rem;
+            font-size: 0.85rem;
+            font-weight: 500;
+            color: #444;
+            margin-bottom: 2rem;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.03);
+        }
+
+        .badge-dot {
+            width: 7px;
+            height: 7px;
+            background-color: #f97316;
+            border-radius: 50%;
+            box-shadow: 0 0 8px #f97316;
+        }
+
+        .hero-title {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: clamp(2.75rem, 5vw, 4.5rem);
+            line-height: 1.08;
+            font-weight: 600;
+            letter-spacing: -0.02em;
+            color: #111827;
+            margin-bottom: 1.5rem;
+        }
+
+        .hero-title span {
+            background: linear-gradient(135deg, #111827 30%, #6b7280 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .hero-description {
+            font-size: 1.125rem;
+            line-height: 1.7;
+            color: #4b5563;
+            margin-bottom: 2.5rem;
+            font-weight: 300;
+        }
+
+        .cta-group {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .btn-primary {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #111827;
+            color: #ffffff;
+            padding: 0.95rem 2.2rem;
+            border-radius: 9999px;
+            font-size: 0.95rem;
+            font-weight: 500;
+            text-decoration: none;
+            transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.35);
+        }
+
+        .btn-primary:hover {
+            background-color: #000000;
+            transform: translateY(-2px);
+            box-shadow: 0 15px 30px -5px rgba(0, 0, 0, 0.45);
+        }
+
+        .btn-secondary {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #ffffff;
+            color: #1f2937;
+            padding: 0.95rem 2.2rem;
+            border-radius: 9999px;
+            font-size: 0.95rem;
+            font-weight: 500;
+            text-decoration: none;
+            border: 1px solid rgba(0, 0, 0, 0.1);
+            transition: all 0.25s ease;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.03);
+        }
+
+        .btn-secondary:hover {
+            background-color: #f9fafb;
+            border-color: rgba(0, 0, 0, 0.2);
+        }
+
+        /* Right Carousel Container */
+        .carousel-stage {
+            position: relative;
+            width: 100%;
+            height: 720px;
+            overflow: visible;
+            pointer-events: none; /* STRICT CONSTRAINT: NOT clickable */
+            user-select: none;
+        }
+
+        /* SVG Motion Path (Hidden visual, used purely as trajectory guide) */
+        .motion-path-svg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            visibility: hidden;
+            overflow: visible;
+        }
+
+        /* Carousel Card Item - ONLY pure image container */
+        .carousel-card {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 320px;
+            height: 215px;
+            border-radius: 1.5rem;
+            overflow: hidden;
+            background-color: #ffffff;
+            border: 5px solid #ffffff;
+            box-shadow: 0 25px 60px -15px rgba(0, 0, 0, 0.22), 0 0 0 1px rgba(0, 0, 0, 0.06);
+            pointer-events: none; /* NO clickable cards */
+            will-change: transform, opacity;
+            opacity: 0;
+            transform-origin: center center;
+        }
+
+        /* Image - PURE IMAGE CONTENT ONLY */
+        .carousel-card img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+            pointer-events: none;
+        }
+
+        /* Responsive */
+        @media (max-width: 1024px) {
+            .container {
+                grid-template-columns: 1fr;
+                gap: 4rem;
+            }
+            .hero-copy {
+                max-width: 100%;
+                text-align: center;
+            }
+            .badge {
+                margin-left: auto;
+                margin-right: auto;
+            }
+            .cta-group {
+                justify-content: center;
+            }
+            .carousel-stage {
+                height: 560px;
+            }
+            .carousel-card {
+                width: 260px;
+                height: 175px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <section class="hero-section">
+        <div class="ambient-blob-1"></div>
+        <div class="ambient-blob-2"></div>
+
+        <div class="container">
+            <!-- Left Editorial Text -->
+            <div class="hero-copy">
+                <div class="badge">
+                    <span class="badge-dot"></span>
+                    <span>Taste Skill • Curved Carousel Architecture</span>
+                </div>
+
+                <h1 class="hero-title">
+                    The Art of Motion,<br>
+                    <span>Curved to Perfection.</span>
+                </h1>
+
+                <p class="hero-description">
+                    A dedicated 90-degree circular arc trajectory built with GSAP and MotionPathPlugin. Fluid entry from the top, maximum scale and clarity at the apex, gracefully sweeping out to the right in an infinite cycle.
+                </p>
+
+                <div class="cta-group">
+                    <a href="#explore" class="btn-primary">Explore Designs</a>
+                    <a href="#docs" class="btn-secondary">View Architecture</a>
+                </div>
+            </div>
+
+            <!-- Right: Infinite Curved Path Image Carousel -->
+            <div class="carousel-stage" id="carouselStage">
+                
+                <!-- SVG Trajectory: Bottom-Left Quarter of a Circle (90-Degree Arc) -->
+                <!-- M 120,-160 (enters top) -> curves down -> sweeps out to right M 1150,680 -->
+                <svg class="motion-path-svg" viewBox="0 0 1000 800">
+                    <path id="quarterArcPath" d="M 120,-160 C 120,380 380,680 1150,680" fill="none" stroke="black" />
+                </svg>
+
+                <!-- ONLY Pure Images: No links, No text, No captions, No click handlers -->
+                <div class="carousel-card">
+                    <img src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?w=800&auto=format&fit=crop&q=80" alt="Curved Gallery Comp 1">
+                </div>
+
+                <div class="carousel-card">
+                    <img src="https://images.unsplash.com/photo-1634017839464-5c339ebe3cb4?w=800&auto=format&fit=crop&q=80" alt="Curved Gallery Comp 2">
+                </div>
+
+                <div class="carousel-card">
+                    <img src="https://images.unsplash.com/photo-1600132806370-bf17e65e942f?w=800&auto=format&fit=crop&q=80" alt="Curved Gallery Comp 3">
+                </div>
+
+                <div class="carousel-card">
+                    <img src="https://images.unsplash.com/photo-1618005198919-d3d4b5a92ead?w=800&auto=format&fit=crop&q=80" alt="Curved Gallery Comp 4">
+                </div>
+
+                <div class="carousel-card">
+                    <img src="https://images.unsplash.com/photo-1620641788421-7a1c342ea42e?w=800&auto=format&fit=crop&q=80" alt="Curved Gallery Comp 5">
+                </div>
+
+                <div class="carousel-card">
+                    <img src="https://images.unsplash.com/photo-1550745165-9bc0b252726f?w=800&auto=format&fit=crop&q=80" alt="Curved Gallery Comp 6">
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- GSAP Curved Motion Script -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            gsap.registerPlugin(MotionPathPlugin);
+
+            const stage = document.getElementById('carouselStage');
+            const items = gsap.utils.toArray('.carousel-card');
+            const totalItems = items.length;
+            const pathSelector = '#quarterArcPath';
+            
+            // Loop Duration in seconds (steady, cinematic pace)
+            const LOOP_DURATION = 16; 
+            
+            let timelines = [];
+
+            function buildCarousel() {
+                // Kill previous timelines on resize to ensure perfect coordinate recalculation
+                timelines.forEach(tl => tl.kill());
+                timelines = [];
+
+                items.forEach((item, index) => {
+                    // Create an individual infinite timeline for each image
+                    const tl = gsap.timeline({ repeat: -1 });
+
+                    // 1. MOTION PATH TRAJECTORY
+                    // Travels along the bottom-left quarter-circle arc
+                    tl.to(item, {
+                        motionPath: {
+                            path: pathSelector,
+                            align: pathSelector,
+                            alignOrigin: [0.5, 0.5],
+                            autoRotate: false
+                        },
+                        duration: LOOP_DURATION,
+                        ease: "none"
+                    }, 0);
+
+                    // 2. DYNAMIC SCALING:
+                    // Start (Top): scale(0.5)
+                    // Center (Apex of curve): scale(1.45)
+                    // End (Right): scale(0.5)
+                    tl.fromTo(item,
+                        { scale: 0.5 },
+                        { scale: 1.45, duration: LOOP_DURATION * 0.5, ease: "sine.out" },
+                        0
+                    );
+                    tl.to(item,
+                        { scale: 0.5, duration: LOOP_DURATION * 0.5, ease: "sine.in" },
+                        LOOP_DURATION * 0.5
+                    );
+
+                    // 3. DYNAMIC OPACITY:
+                    // Start (Top): 0 -> fades in to 1
+                    // Center (Apex): 100% full opacity & focus
+                    // End (Right): fades out to 0
+                    tl.fromTo(item,
+                        { opacity: 0 },
+                        { opacity: 1, duration: LOOP_DURATION * 0.35, ease: "power1.out" },
+                        0
+                    );
+                    tl.to(item,
+                        { opacity: 0, duration: LOOP_DURATION * 0.35, ease: "power1.in" },
+                        LOOP_DURATION * 0.65
+                    );
+
+                    // 4. DYNAMIC Z-INDEX:
+                    // Ensure the middle/largest item is always physically on top of surrounding items
+                    tl.set(item, { zIndex: 1 }, 0);
+                    tl.set(item, { zIndex: 50 }, LOOP_DURATION * 0.35);
+                    tl.set(item, { zIndex: 1 }, LOOP_DURATION * 0.65);
+
+                    // 5. SEAMLESS INFINITE EQUAL SPACING:
+                    // Stagger initial progress evenly between [0, 1]
+                    const initialProgress = index / totalItems;
+                    tl.progress(initialProgress);
+
+                    timelines.push(tl);
+                });
+            }
+
+            // Initial build
+            buildCarousel();
+
+            // Responsive Debounced Re-alignment
+            let resizeTimer;
+            window.addEventListener('resize', () => {
+                clearTimeout(resizeTimer);
+                resizeTimer = setTimeout(() => {
+                    buildCarousel();
+                }, 250);
+            });
+        });
+    </script>
+</body>
+</html>

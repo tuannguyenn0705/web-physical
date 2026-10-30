@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 520" width="800" height="520">
+  <defs>
+    <linearGradient id="bgDarkGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0F172A"/>
+      <stop offset="100%" stop-color="#020617"/>
+    </linearGradient>
+    <linearGradient id="orbGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#38BDF8"/>
+      <stop offset="50%" stop-color="#818CF8"/>
+      <stop offset="100%" stop-color="#C084FC"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="800" height="520" rx="32" fill="url(#bgDarkGrad)"/>
+  <rect x="2" y="2" width="796" height="516" rx="30" fill="none" stroke="#1E293B" stroke-width="2"/>
+
+  <!-- Glowing Orb Graphic -->
+  <circle cx="560" cy="260" r="140" fill="url(#orbGrad)" opacity="0.85" filter="blur(1px)"/>
+  <circle cx="560" cy="260" r="80" fill="#FFFFFF" opacity="0.3"/>
+
+  <!-- Frosted Glass Overlay Card inside -->
+  <rect x="50" y="70" width="450" height="380" rx="24" fill="rgba(15, 23, 42, 0.75)" stroke="rgba(255, 255, 255, 0.15)" stroke-width="1.5"/>
+
+  <g transform="translate(85, 120)">
+    <rect width="110" height="28" rx="14" fill="rgba(56, 189, 248, 0.2)"/>
+    <text x="14" y="19" font-family="'Inter', sans-serif" font-size="12" font-weight="700" fill="#38BDF8">REALTIME AI</text>
+
+    <text x="0" y="80" font-family="'Inter', sans-serif" font-size="38" font-weight="700" fill="#F8FAFC">Deep Inference</text>
+    <text x="0" y="125" font-family="'Inter', sans-serif" font-size="38" font-weight="700" fill="#94A3B8">Engine v2.0</text>
+
+    <text x="0" y="180" font-family="'Inter', sans-serif" font-size="15" fill="#64748B">Latency: 18ms • Throughput: 1.2M tokens/s</text>
+    
+    <!-- Mini Progress Bars -->
+    <rect x="0" y="210" width="360" height="8" rx="4" fill="#334155"/>
+    <rect x="0" y="210" width="310" height="8" rx="4" fill="#38BDF8"/>
+  </g>
+</svg>
