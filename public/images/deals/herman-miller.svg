@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" fill="none">
+  <rect width="120" height="120" rx="24" fill="#0F172A"/>
+  <path d="M44 30H76C78.2091 30 80 31.7909 80 34V58C80 62.4183 76.4183 66 72 66H48C43.5817 66 40 62.4183 40 58V34C40 31.7909 41.7909 30 44 30Z" stroke="#38BDF8" stroke-width="3.5" fill="#1E293B"/>
+  <path d="M36 68H84" stroke="#F59E0B" stroke-width="4" stroke-linecap="round"/>
+  <path d="M60 68V86M46 86H74" stroke="#94A3B8" stroke-width="3.5" stroke-linecap="round"/>
+  <text x="60" y="105" text-anchor="middle" fill="#38BDF8" font-family="monospace" font-size="9" font-weight="bold">AERON ERGO</text>
+</svg>

@@ -8,114 +8,110 @@ use Illuminate\Database\Seeder;
 class PageSeeder extends Seeder
 {
     /**
-     * Seed essential trust, legal, and affiliate compliance pages.
+     * Seed essential trust, testing methodology, legal, and FTC/Amazon affiliate compliance pages.
      */
     public function run(): void
     {
         $pages = [
             [
                 'slug' => 'about-us',
-                'title' => 'About AI Hub Insider',
-                'meta_title' => 'About Us - AI Hub Insider',
-                'meta_description' => 'Learn about AI Hub Insider, our editorial mission, independent AI software testing methodology, and global team of analysts.',
+                'title' => 'About VERDICT.LAB & How We Test',
+                'meta_title' => 'About Us & Testing Methodology - VERDICT.LAB',
+                'meta_description' => 'Learn how VERDICT.LAB independently purchases, stress-tests, and benchmarks consumer hardware, smart home appliances, and everyday gear.',
                 'is_active' => true,
                 'content' => '
-                    <p class="lead"><strong>AI Hub Insider</strong> is an independent digital publication dedicated to helping professionals, developers, and creators navigate the rapidly evolving artificial intelligence ecosystem.</p>
-                    <h2>Our Editorial Mission</h2>
-                    <p>Every week, hundreds of new AI tools, large language models, and automation platforms launch worldwide. Our mission is to cut through the marketing noise with rigorous, hands-on testing, real-world benchmarks, and practical tutorials you can apply immediately.</p>
-                    <h2>How We Test & Review AI Software</h2>
+                    <p class="lead"><strong>VERDICT.LAB</strong> is an independent consumer hardware publication and product testing laboratory dedicated to helping readers buy better, longer-lasting physical gear.</p>
+                    <h2>Our Editorial &amp; Testing Philosophy</h2>
+                    <p>Every year, thousands of headphones, mechanical keyboards, robot vacuums, espresso machines, and ergonomic chairs hit the market wrapped in exaggerated marketing claims. Our engineering and editorial team cuts through the hype by purchasing retail units and putting them through repeatable, quantitative stress tests.</p>
+                    <h2>How We Test Physical Products</h2>
                     <ul>
-                        <li><strong>Hands-On Evaluation:</strong> We test every AI tool in real production workflows—measuring output accuracy, latency, pricing value, and ease of integration.</li>
-                        <li><strong>Unbiased Ratings:</strong> Our editorial scores are determined solely by our research and testing team. Commercial partnerships never influence our review verdicts.</li>
-                        <li><strong>Verified Deals & Discounts:</strong> Our partnerships team works directly with leading AI software vendors to negotiate exclusive promo codes and verified discounts for our readers.</li>
+                        <li><strong>Retail Unit Purchasing:</strong> We purchase our test units from the same authorized retailers our readers use—including Amazon, Best Buy, Walmart, and B&amp;H Photo—so manufacturers cannot hand-pick "golden samples."</li>
+                        <li><strong>Standardized Laboratory Telemetry:</strong> From acoustic isolation chambers and LDAT key-latency sensors to thermal imaging cameras and laser particle counters, we log objective data before writing a single word.</li>
+                        <li><strong>Long-Term Durability Tracking:</strong> A product that works on day one might fail on day ninety. We live with our top picks in real homes and offices for months to monitor battery degradation, hinge wear, and warranty support.</li>
+                        <li><strong>100% Editorial Independence:</strong> Brands cannot pay to be featured, nor can they preview or alter our scores before publication.</li>
                     </ul>
-                    <h2>Editorial Standards & Corrections</h2>
-                    <p>We update our reviews and comparisons continuously as models evolve (such as GPT-5, Claude 4, Gemini 2.0, and Cursor). If you spot an outdated metric or broken offer link, please reach out to our editorial desk at <a href="mailto:aihubinsider@gmail.com">aihubinsider@gmail.com</a>.</p>
+                    <h2>Corrections &amp; Product Submissions</h2>
+                    <p>We continuously update our buying guides as new hardware revisions launch or street prices shift. To reach our laboratory team or inquire about our testing protocols, contact <a href="mailto:editorial@verdictlab.com">editorial@verdictlab.com</a>.</p>
                 ',
             ],
             [
                 'slug' => 'contact',
-                'title' => 'Contact & Partnerships',
-                'meta_title' => 'Contact Us & Advertise - AI Hub Insider',
-                'meta_description' => 'Get in touch with the AI Hub Insider editorial and partnerships team for tool submissions, affiliate deals, and media inquiries.',
+                'title' => 'Contact & Brand Partnerships',
+                'meta_title' => 'Contact Us & Partnerships - VERDICT.LAB',
+                'meta_description' => 'Contact the VERDICT.LAB editorial lab, deals desk, and commerce partnerships team.',
                 'is_active' => true,
                 'content' => '
-                    <p class="lead">Whether you want to submit an AI tool for editorial review, share an exclusive promo code for our Deals directory, or discuss partnership opportunities, our team would love to hear from you.</p>
-                    <h2>Direct Contact Channel</h2>
+                    <p class="lead">Have a question about one of our hardware benchmarks, spotted a live price drop, or want to discuss an affiliate commerce partnership? Reach out to the appropriate desk below.</p>
+                    <h2>Direct Department Contacts</h2>
                     <ul>
-                        <li><strong>Editorial, Press & Partnerships:</strong> <a href="mailto:aihubinsider@gmail.com">aihubinsider@gmail.com</a></li>
+                        <li><strong>Editorial &amp; Testing Lab Inquiries:</strong> <a href="mailto:editorial@verdictlab.com">editorial@verdictlab.com</a></li>
+                        <li><strong>Deals Desk &amp; Retail Partnerships:</strong> <a href="mailto:deals@verdictlab.com">deals@verdictlab.com</a></li>
                     </ul>
-                    <h2>U.S. Headquarters & Operations</h2>
-                    <p><strong>AI Hub Insider LLC</strong><br>
+                    <h2>U.S. Testing Lab &amp; Headquarters</h2>
+                    <p><strong>VERDICT.LAB LLC</strong><br>
                     1200 17th Street NW, Suite 500<br>
                     Washington, D.C. 20036<br>
                     United States</p>
-                    <h2>Submit an AI Tool or Exclusive Deal</h2>
-                    <p>If you represent a software vendor or AI startup and would like your product reviewed or featured in our <a href="/deals">AI Deals Directory</a>, please include:</p>
-                    <ul>
-                        <li>Your product name, official website URL, and primary use case.</li>
-                        <li>Details of any discount, promo code, or extended free trial available for AI Hub Insider readers.</li>
-                        <li>Your affiliate program details (PartnerStack, Impact, CJ, FirstPromoter, or custom tracking link).</li>
-                    </ul>
-                    <p>Our editorial and partnerships team typically responds within 24–48 business hours.</p>
+                    <h2>Information for Retailers &amp; Affiliate Networks</h2>
+                    <p>VERDICT.LAB partners with leading global e-commerce retailers and affiliate networks (including Amazon Associates, Impact, CJ Affiliate, Rakuten Advertising, ShareASale, Awin, and Best Buy) to provide real-time stock verification and promotional codes for our readers.</p>
+                    <p>Please note: Submitting a physical product or affiliate offer does not guarantee editorial coverage or a favorable rating. All hardware must pass our standardized laboratory benchmark suite.</p>
                 ',
             ],
             [
                 'slug' => 'affiliate-disclosure',
-                'title' => 'Affiliate Disclosure',
-                'meta_title' => 'FTC Affiliate Disclosure - AI Hub Insider',
-                'meta_description' => 'Full transparency regarding how AI Hub Insider uses affiliate links, promo codes, and partner commissions in compliance with FTC guidelines.',
+                'title' => 'FTC & Amazon Affiliate Disclosure',
+                'meta_title' => 'FTC Affiliate Disclosure - VERDICT.LAB',
+                'meta_description' => 'Full transparency regarding how VERDICT.LAB uses retail affiliate links, price comparison widgets, and partner commissions in compliance with FTC guidelines.',
                 'is_active' => true,
                 'content' => '
-                    <p class="lead">At <strong>AI Hub Insider</strong>, transparency and reader trust are our highest priorities. In compliance with the Federal Trade Commission (FTC) guidelines, please assume that any external link to a software product, AI tool, or deal on this website may be an affiliate link.</p>
-                    <h2>How Affiliate Links Work</h2>
-                    <p>When you click on a "Shop Now" button, promo link, or product recommendation on AI Hub Insider and subsequently make a purchase on the vendor’s website, we may receive a referral commission from that vendor.</p>
+                    <p class="lead">At <strong>VERDICT.LAB</strong>, reader trust and testing integrity come first. In full compliance with the Federal Trade Commission (FTC) 16 CFR Part 255 Endorsement Guides, please note that VERDICT.LAB is a reader-supported publication and uses affiliate links to authorized retail merchants.</p>
+                    <h2>Amazon Associates Disclosure</h2>
+                    <p><strong>As an Amazon Associate, VERDICT.LAB earns from qualifying purchases.</strong> Amazon and the Amazon logo are trademarks of Amazon.com, Inc. or its affiliates.</p>
+                    <h2>How Retail Affiliate Links Work</h2>
+                    <p>When you click a "Buy on Amazon", "Check Best Buy", or "Claim Deal" button in our buying guides and subsequently purchase a product from that retailer, we may earn a small referral commission from the merchant.</p>
                     <ul>
-                        <li><strong>Zero Extra Cost to You:</strong> Clicking an affiliate link never increases the price you pay. In most cases, our partner links apply an exclusive discount or extended trial that lowers your cost.</li>
-                        <li><strong>Editorial Independence:</strong> Compensation from affiliate programs never dictates which products we review or the scores we assign. We regularly recommend free and open-source AI tools alongside commercial software.</li>
+                        <li><strong>Never Any Extra Cost to You:</strong> Clicking an affiliate link never increases the retail price you pay. In many cases, our Deals Desk negotiates exclusive promo codes that lower your checkout total.</li>
+                        <li><strong>Strict Separation of Editorial &amp; Commerce:</strong> Our laboratory engineers and writers evaluate products and assign scores before our commerce team attaches retail links. Writers do not know which retailers offer higher commission rates.</li>
+                        <li><strong>Customer Returns Cancel Commissions:</strong> If you buy a product we recommend and return it because it did not meet your expectations, we make nothing. This aligns our financial incentive directly with recommending reliable, high-quality physical products.</li>
                     </ul>
-                    <h2>Why We Use Affiliate Partnerships</h2>
-                    <p>Running in-depth benchmark tests on frontier AI models, maintaining server infrastructure, and publishing free step-by-step tutorials require significant resources. Affiliate commissions allow us to keep all of our articles, guides, and benchmarks 100% free for readers worldwide without intrusive pop-up advertisements.</p>
-                    <p>If you have any questions regarding this disclosure or our partnership policies, please contact us at <a href="mailto:aihubinsider@gmail.com">aihubinsider@gmail.com</a>.</p>
+                    <p>For questions regarding our ethics policy or affiliate disclosures, contact <a href="mailto:editorial@verdictlab.com">editorial@verdictlab.com</a>.</p>
                 ',
             ],
             [
                 'slug' => 'privacy-policy',
                 'title' => 'Privacy Policy',
-                'meta_title' => 'Privacy Policy - AI Hub Insider',
-                'meta_description' => 'Read the AI Hub Insider Privacy Policy covering data collection, cookies, newsletter subscriptions, and third-party affiliate links.',
+                'meta_title' => 'Privacy Policy - VERDICT.LAB',
+                'meta_description' => 'Read the VERDICT.LAB Privacy Policy covering data collection, cookies, price alert subscriptions, and third-party retail affiliate tracking.',
                 'is_active' => true,
                 'content' => '
-                    <p class="lead">This Privacy Policy explains how <strong>AI Hub Insider</strong> collects, uses, and safeguards information when you visit our website.</p>
+                    <p class="lead">This Privacy Policy explains how <strong>VERDICT.LAB LLC</strong> collects, uses, and protects information when you browse our hardware reviews, comparison tables, and deal alerts.</p>
                     <h2>1. Information We Collect</h2>
                     <ul>
-                        <li><strong>Voluntary Information:</strong> When you subscribe to our newsletter or contact our team, we collect your email address and optional display name.</li>
-                        <li><strong>Usage & Analytics Data:</strong> We collect anonymized log data such as browser type, referring pages, and time spent on articles to improve site performance and content quality.</li>
+                        <li><strong>Voluntary Information:</strong> When you subscribe to our Price Drop Alerts newsletter or email our team, we collect your email address solely to deliver the requested updates.</li>
+                        <li><strong>Anonymized Analytics:</strong> We collect standard non-identifying browser telemetry (such as device type, page views, and time on page) to optimize website speed and layout usability.</li>
                     </ul>
-                    <h2>2. Cookies & Affiliate Tracking</h2>
-                    <p>When you click on an external deal or partner link on AI Hub Insider, the destination merchant or affiliate network (such as Impact, PartnerStack, or CJ Affiliate) may place a standard tracking cookie in your browser solely to attribute the referral and apply your discount.</p>
-                    <h2>3. How We Use Your Information</h2>
-                    <p>We never sell, rent, or trade your personal email address to third-party data brokers. Newsletter emails are used strictly to send our curated AI news briefings and verified software deals, and you may unsubscribe with a single click at any time.</p>
-                    <h2>4. Your Privacy Rights (GDPR & CCPA)</h2>
-                    <p>You have the right to request access to, correction of, or deletion of any personal data we hold about you. To exercise these rights, email <a href="mailto:aihubinsider@gmail.com">aihubinsider@gmail.com</a>.</p>
+                    <h2>2. Cookies &amp; Retail Affiliate Attribution</h2>
+                    <p>When you click an outbound link to a retail merchant (such as Amazon, Best Buy, Walmart, B&amp;H Photo, or a brand store via Impact, CJ Affiliate, Rakuten, or ShareASale), the destination merchant may place a temporary referral cookie in your browser solely to attribute the purchase and apply any promotional discount.</p>
+                    <h2>3. Zero Data Selling Guarantee</h2>
+                    <p>We never sell, rent, or trade subscriber email addresses to third-party advertisers or data brokers. You can unsubscribe from our newsletter with a single click at the bottom of any email.</p>
+                    <h2>4. Your Rights Under GDPR &amp; CCPA</h2>
+                    <p>You may request access to or permanent deletion of your personal data at any time by emailing <a href="mailto:editorial@verdictlab.com">editorial@verdictlab.com</a>.</p>
                 ',
             ],
             [
                 'slug' => 'terms-of-service',
                 'title' => 'Terms of Service',
-                'meta_title' => 'Terms of Service - AI Hub Insider',
-                'meta_description' => 'Terms and conditions governing your use of the AI Hub Insider website, reviews, tutorials, and third-party software deals.',
+                'meta_title' => 'Terms of Service - VERDICT.LAB',
+                'meta_description' => 'Terms and conditions governing your use of VERDICT.LAB product reviews, lab comparisons, and retail deal links.',
                 'is_active' => true,
                 'content' => '
-                    <p class="lead">By accessing and using <strong>AI Hub Insider</strong>, you agree to comply with and be bound by the following Terms of Service.</p>
-                    <h2>1. Intellectual Property</h2>
-                    <p>All original articles, reviews, tutorials, graphics, and code examples published on AI Hub Insider are the property of AI Hub Insider unless otherwise noted. You may quote brief excerpts with clear attribution and a direct link back to the original article.</p>
-                    <h2>2. Third-Party Software & Deals Disclaimer</h2>
-                    <p>AI Hub Insider curates discounts, promo codes, and links to third-party AI software providers. Because software pricing and promotional terms are controlled by external vendors, we cannot guarantee that a third-party offer or coupon code will remain active indefinitely. All purchases made on external websites are governed by that vendor’s own terms and refund policies.</p>
-                    <h2>3. No Professional Advice</h2>
-                    <p>Content on AI Hub Insider is provided for informational and educational purposes only. Always verify critical technical or business configurations before deploying AI tools in production environments.</p>
-                    <h2>4. User Conduct</h2>
-                    <p>You agree to use our website for lawful purposes only and in a way that does not infringe upon the rights or restrict the use and enjoyment of this site by any third party.</p>
+                    <p class="lead">By accessing and using <strong>VERDICT.LAB</strong>, you agree to comply with the following Terms of Service.</p>
+                    <h2>1. Intellectual Property &amp; Lab Data</h2>
+                    <p>All original hardware reviews, benchmark tables, photography, and buying guides published on VERDICT.LAB are the copyrighted property of VERDICT.LAB LLC. Brief quotations with clear attribution and a direct hyperlink back to our source page are permitted.</p>
+                    <h2>2. Retail Pricing &amp; Inventory Disclaimer</h2>
+                    <p>Product prices, stock availability, and promotional coupon codes on third-party retail platforms (including Amazon, Best Buy, and Walmart) change frequently. While our price tracker updates regularly, the final price displayed on the merchant’s checkout page at the time of purchase governs the transaction.</p>
+                    <h2>3. Warranty &amp; Merchant Fulfillment</h2>
+                    <p>VERDICT.LAB is an independent review publication and does not ship physical merchandise directly. All product warranties, shipping timelines, and return policies are fulfilled by the respective manufacturer or authorized retailer.</p>
                 ',
             ],
         ];
