@@ -42,7 +42,7 @@ class DealManagementTest extends TestCase
 
     public function test_admin_can_create_update_and_delete_deals(): void
     {
-        $admin = User::factory()->create();
+        $admin = User::factory()->admin()->create();
 
         // Create deal
         $storeResponse = $this->actingAs($admin)->post(route('admin.deals.store'), [
@@ -92,7 +92,7 @@ class DealManagementTest extends TestCase
 
     public function test_update_post_type_is_no_longer_accepted(): void
     {
-        $admin = User::factory()->create();
+        $admin = User::factory()->admin()->create();
         $category = Category::create([
             'name' => 'AI Tools',
             'slug' => 'ai-tools',

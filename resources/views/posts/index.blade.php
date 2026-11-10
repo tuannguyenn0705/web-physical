@@ -10,7 +10,7 @@
         <div class="flex flex-col lg:flex-row lg:items-end justify-between gap-6">
             <div>
                 <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-amber-100 text-amber-900 font-mono text-[11px] font-bold uppercase tracking-wider mb-3">
-                    <span>Verdict Lab Archive</span>
+                    <span>VerdictTC Archive</span>
                 </span>
                 <h1 class="text-2xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">
                     @if(request('type'))

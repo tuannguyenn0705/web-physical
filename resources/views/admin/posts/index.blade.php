@@ -18,7 +18,7 @@
         @php
             $types = [
                 ['key' => null, 'label' => 'Tất cả bài viết', 'count' => $typeCounts['all'] ?? 0],
-                ['key' => 'news', 'label' => 'Tin tức AI', 'count' => $typeCounts['news'] ?? 0],
+                ['key' => 'news', 'label' => 'Tin tức & First Looks', 'count' => $typeCounts['news'] ?? 0],
                 ['key' => 'review', 'label' => 'Đánh giá (Review)', 'count' => $typeCounts['review'] ?? 0],
                 ['key' => 'tutorial', 'label' => 'Hướng dẫn (Tutorial)', 'count' => $typeCounts['tutorial'] ?? 0],
             ];

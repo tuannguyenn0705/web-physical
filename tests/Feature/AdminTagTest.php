@@ -12,7 +12,7 @@ class AdminTagTest extends TestCase
 
     public function test_admin_can_create_and_delete_tags_via_json(): void
     {
-        $admin = User::factory()->create();
+        $admin = User::factory()->admin()->create();
 
         $createResponse = $this->actingAs($admin)->postJson(route('admin.tags.store'), [
             'name' => '#GPT-5 Omni',

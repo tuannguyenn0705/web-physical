@@ -26,12 +26,12 @@ class AdminPostManagementTest extends TestCase
     public function test_admin_can_login_with_valid_credentials(): void
     {
         $user = User::factory()->create([
-            'email' => 'adminaihub@gmail.com',
+            'email' => 'verdictlab@gmail.com',
             'password' => bcrypt('Tuan2006@'),
         ]);
 
         $response = $this->post('/login', [
-            'email' => 'adminaihub@gmail.com',
+            'email' => 'verdictlab@gmail.com',
             'password' => 'Tuan2006@',
         ]);
 
@@ -42,7 +42,7 @@ class AdminPostManagementTest extends TestCase
     public function test_login_rejects_bots_filling_honeypot(): void
     {
         $this->post('/login', [
-            'email' => 'adminaihub@gmail.com',
+            'email' => 'verdictlab@gmail.com',
             'password' => 'Tuan2006@',
             'website_url_hp' => 'http://spam-bot.com',
         ]);
@@ -50,12 +50,29 @@ class AdminPostManagementTest extends TestCase
         $this->assertGuest();
     }
 
+    public function test_non_whitelisted_users_cannot_access_admin_or_login(): void
+    {
+        // 1. Trying to login with a non-whitelisted email
+        $response = $this->post('/login', [
+            'email' => 'hacker@malicious.com',
+            'password' => 'somePassword123',
+        ]);
+        $response->assertSessionHasErrors('email');
+        $this->assertGuest();
+
+        // 2. An authenticated non-admin user trying to access admin dashboard
+        $nonAdmin = User::factory()->create(['email' => 'randomuser@example.com']);
+        $adminResponse = $this->actingAs($nonAdmin)->get('/admin');
+        $adminResponse->assertRedirect('/login');
+        $this->assertGuest();
+    }
+
     public function test_authenticated_user_can_view_post_list_and_create_post(): void
     {
-        $user = User::factory()->create();
+        $user = User::factory()->admin()->create();
         $category = Category::create([
-            'name' => 'Tin tức AI',
-            'slug' => 'tin-tuc-ai',
+            'name' => 'Tin tức & First Looks',
+            'slug' => 'tin-tuc-first-looks',
         ]);
 
         $this->actingAs($user);
@@ -84,7 +101,7 @@ class AdminPostManagementTest extends TestCase
     {
         Storage::fake('public');
 
-        $user = User::factory()->create();
+        $user = User::factory()->admin()->create();
         $this->actingAs($user);
 
         $file = UploadedFile::fake()->image('diagram.png', 800, 600);
@@ -141,7 +158,7 @@ class AdminPostManagementTest extends TestCase
 
     public function test_admin_post_create_and_edit_views_render_quill_editor(): void
     {
-        $user = User::factory()->create();
+        $user = User::factory()->admin()->create();
         $this->actingAs($user);
 
         $category = Category::create([

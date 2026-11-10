@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="vi" class="h-full bg-slate-100">
+<html lang="en" class="h-full bg-slate-100">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>@yield('title', 'Quản Trị') - {{ config('app.name', 'AI Hub Insider') }}</title>
+    <title>@yield('title', 'Admin') - {{ config('app.name', 'VerdictTC.com') }}</title>
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
     <!-- Favicon & App Icons -->
@@ -31,10 +31,18 @@
             {{-- Nhóm phần trên (Logo + Danh sách menu cuộn độc lập) --}}
             <div class="flex flex-col flex-1 min-h-0">
                 {{-- Header Sidebar: Cố định ở góc trên bên trái, cao h-16 khớp header chính --}}
-                <div class="h-16 px-6 flex items-center border-b border-slate-200 bg-white flex-shrink-0">
-                    <a href="{{ route('admin.dashboard') }}" class="block">
-                        <span class="text-base font-bold text-slate-900 tracking-tight block">AI Hub Admin</span>
-                        <span class="text-xs text-slate-500 font-medium block">Hệ thống quản trị nội dung</span>
+                <div class="h-16 px-6 flex items-center gap-3 border-b border-slate-200 bg-white flex-shrink-0">
+                    <div class="w-8 h-8 rounded-xl bg-gray-950 flex items-center justify-center shrink-0 shadow-xs border border-gray-800">
+                        <svg class="w-5 h-5" viewBox="0 0 64 64" fill="none">
+                            <path d="M15 23L28 45L49 17" stroke="#F59E0B" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+                            <circle cx="48" cy="44" r="5" fill="#10B981"/>
+                        </svg>
+                    </div>
+                    <a href="{{ route('admin.dashboard') }}" class="block min-w-0">
+                        <span class="text-sm font-black text-slate-900 tracking-tight block truncate">
+                            VERDICT<span class="text-amber-500 font-black">TC</span><span class="text-slate-400 font-bold text-xs">.com</span>
+                        </span>
+                        <span class="text-[11px] text-slate-500 font-medium block truncate">Editorial Dashboard</span>
                     </a>
                 </div>
 
@@ -43,39 +51,39 @@
                     {{-- Mục 1: Bảng điều khiển --}}
                     <div>
                         <div class="px-3 mb-2.5 text-xs font-semibold text-slate-400 uppercase tracking-wider">
-                            Tổng Quan
+                            Overview
                         </div>
                         <a href="{{ route('admin.dashboard') }}"
                            class="flex items-center px-4 py-2.5 text-sm rounded-xl transition {{ request()->routeIs('admin.dashboard') ? 'bg-white text-slate-900 font-semibold shadow-xs border border-slate-200/90' : 'text-slate-600 hover:text-slate-900 hover:bg-slate-200/60 font-medium' }}">
-                            Bảng điều khiển
+                            Dashboard
                         </a>
                     </div>
 
                     {{-- Mục 2: Quản lý bài đăng & các nhóm bài --}}
                     <div>
                         <div class="px-3 mb-2.5 text-xs font-semibold text-slate-400 uppercase tracking-wider">
-                            Quản Lý Bài Đăng
+                            Editorial Content
                         </div>
 
                         <div class="space-y-1">
                             <a href="{{ route('admin.posts.index') }}"
                                class="flex items-center justify-between px-4 py-2.5 text-sm rounded-xl transition {{ request()->routeIs('admin.posts.*') && !request('type') ? 'bg-white text-slate-900 font-semibold shadow-xs border border-slate-200/90' : 'text-slate-600 hover:text-slate-900 hover:bg-slate-200/60 font-medium' }}">
-                                <span>Tất cả bài viết</span>
+                                <span>All Articles</span>
                             </a>
 
                             {{-- 3 Nhóm bài viết con --}}
                             <div class="pl-3.5 pt-1 pb-1 space-y-1 border-l-2 border-slate-300 ml-4 my-1.5">
                                 <a href="{{ route('admin.posts.index', ['type' => 'news']) }}"
                                    class="flex items-center justify-between px-3 py-2 text-xs rounded-lg transition {{ request('type') === 'news' ? 'bg-white text-blue-700 font-semibold shadow-xs border border-blue-200' : 'text-slate-600 hover:text-slate-900 hover:bg-slate-200/50 font-medium' }}">
-                                    <span>Tin tức AI</span>
+                                    <span>First Looks &amp; News</span>
                                 </a>
                                 <a href="{{ route('admin.posts.index', ['type' => 'review']) }}"
                                    class="flex items-center justify-between px-3 py-2 text-xs rounded-lg transition {{ request('type') === 'review' ? 'bg-white text-amber-700 font-semibold shadow-xs border border-amber-200' : 'text-slate-600 hover:text-slate-900 hover:bg-slate-200/50 font-medium' }}">
-                                    <span>Đánh giá (Review)</span>
+                                    <span>In-Depth Reviews</span>
                                 </a>
                                 <a href="{{ route('admin.posts.index', ['type' => 'tutorial']) }}"
                                    class="flex items-center justify-between px-3 py-2 text-xs rounded-lg transition {{ request('type') === 'tutorial' ? 'bg-white text-purple-700 font-semibold shadow-xs border border-purple-200' : 'text-slate-600 hover:text-slate-900 hover:bg-slate-200/50 font-medium' }}">
-                                    <span>Hướng dẫn (Tutorial)</span>
+                                    <span>Buying Guides &amp; How-To</span>
                                 </a>
                             </div>
                         </div>
@@ -84,13 +92,13 @@
                     {{-- Mục 3: Quản lý Deals (Affiliate) --}}
                     <div>
                         <div class="px-3 mb-2.5 text-xs font-semibold text-slate-400 uppercase tracking-wider">
-                            Quản Lý Deals
+                            Affiliate Deals
                         </div>
 
                         <div class="space-y-1.5">
                             <a href="{{ route('admin.deals.index') }}"
                                class="flex items-center justify-between px-4 py-2.5 text-sm rounded-xl transition {{ request()->routeIs('admin.deals.*') ? 'bg-white text-slate-900 font-semibold shadow-xs border border-slate-200/90' : 'text-slate-600 hover:text-slate-900 hover:bg-slate-200/60 font-medium' }}">
-                                <span>Danh sách Deals</span>
+                                <span>Deals &amp; Discounts</span>
                             </a>
                         </div>
                     </div>
@@ -98,11 +106,11 @@
                     {{-- Mục 4: Quản lý danh mục --}}
                     <div>
                         <div class="px-3 mb-2.5 text-xs font-semibold text-slate-400 uppercase tracking-wider">
-                            Cấu Trúc
+                            Taxonomy
                         </div>
                         <a href="{{ route('admin.categories.index') }}"
                            class="flex items-center px-4 py-2.5 text-sm rounded-xl transition {{ request()->routeIs('admin.categories.*') ? 'bg-white text-slate-900 font-semibold shadow-xs border border-slate-200/90' : 'text-slate-600 hover:text-slate-900 hover:bg-slate-200/60 font-medium' }}">
-                            Danh mục bài viết
+                            Categories
                         </a>
                     </div>
                 </nav>
@@ -111,21 +119,21 @@
             {{-- Chân Sidebar: LUÔN CỐ ĐỊNH Ở ĐÁY MÀN HÌNH, KHÔNG BỊ KHUẤT --}}
             <div class="p-5 border-t border-slate-200 bg-slate-100/70 flex-shrink-0">
                 <div class="px-1 mb-3.5">
-                    <p class="text-sm font-semibold text-slate-900 truncate">{{ auth()->user()->name ?? 'Admin AI Hub' }}</p>
-                    <p class="text-xs text-slate-500 truncate mt-0.5">{{ auth()->user()->email ?? 'adminaihub@gmail.com' }}</p>
+                    <p class="text-sm font-semibold text-slate-900 truncate">{{ auth()->user()->name ?? 'VerdictTC Admin' }}</p>
+                    <p class="text-xs text-slate-500 truncate mt-0.5">{{ auth()->user()->email ?? 'verdictlab@gmail.com' }}</p>
                 </div>
 
                 <div class="grid grid-cols-2 gap-2 text-xs font-medium">
                     <a href="{{ route('home') }}" target="_blank"
-                       class="flex items-center justify-center py-2 px-3 rounded-xl bg-white hover:bg-slate-50 text-slate-700 border border-slate-200 shadow-2xs transition text-center">
-                        Xem Web
+                       class="flex items-center justify-center py-2 px-3 rounded-xl bg-white hover:bg-slate-50 text-slate-700 border border-slate-200 shadow-2xs transition text-center font-semibold">
+                        View Site
                     </a>
 
                     <form method="POST" action="{{ route('logout') }}" class="w-full">
                         @csrf
                         <button type="submit" 
-                                class="w-full flex items-center justify-center py-2 px-3 rounded-xl bg-red-50 hover:bg-red-100 text-red-600 border border-red-200 transition text-center cursor-pointer font-medium">
-                            Đăng xuất
+                                class="w-full flex items-center justify-center py-2 px-3 rounded-xl bg-red-50 hover:bg-red-100 text-red-600 border border-red-200 transition text-center cursor-pointer font-semibold">
+                            Sign Out
                         </button>
                     </form>
                 </div>
@@ -140,7 +148,7 @@
             <header class="h-16 bg-white border-b border-slate-200 px-6 sm:px-8 flex items-center justify-between flex-shrink-0 z-20 shadow-2xs">
                 <div>
                     <h1 class="text-lg font-bold text-slate-900 font-sans">
-                        @yield('header_title', View::getSection('title', 'Bảng Điều Khiển'))
+                        @yield('header_title', View::getSection('title', 'Dashboard'))
                     </h1>
                 </div>
 

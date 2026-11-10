@@ -37,14 +37,14 @@
                         <p class="text-xs text-slate-500 leading-relaxed mb-1.5">
                             Questions about our hardware test protocols or retail affiliate partnerships?
                         </p>
-                        <a href="mailto:editorial@verdictlab.com" class="text-xs font-bold text-emerald-700 hover:underline">
-                            editorial@verdictlab.com
+                        <a href="mailto:editorial@verdicttc.com" class="text-xs font-bold text-emerald-700 hover:underline">
+                            editorial@verdicttc.com
                         </a>
                     </div>
                     <div class="pt-3 border-t border-slate-100 text-xs text-slate-500">
                         <span class="text-[10px] font-mono uppercase tracking-wider font-bold text-slate-400 block mb-0.5">U.S. Testing Lab</span>
                         <p class="text-slate-700 font-semibold leading-relaxed">
-                            VERDICT.LAB LLC<br>
+                            VerdictTC.com LLC<br>
                             1200 17th St NW, Suite 500<br>
                             Washington, D.C. 20036, USA
                         </p>
@@ -58,7 +58,7 @@
             <div class="bg-white rounded-3xl border border-slate-200/90 p-6 sm:p-10 lg:p-12 shadow-2xs">
                 <header class="pb-6 mb-8 border-b border-slate-200/80">
                     <span class="inline-block px-2.5 py-1 rounded-lg bg-amber-100 text-amber-900 font-mono text-[10px] font-bold uppercase tracking-wider mb-3">
-                        VERDICT.LAB Official Policy
+                        VerdictTC.com Official Policy
                     </span>
                     <h1 class="text-3xl sm:text-4xl font-extrabold text-slate-950 tracking-tight mb-2">
                         {{ $page->title }}

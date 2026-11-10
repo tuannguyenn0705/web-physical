@@ -76,8 +76,8 @@
                         </svg>
                     </div>
                     <div>
-                        <span class="text-lg font-extrabold text-white tracking-tight block leading-none">
-                            VERDICT<span class="text-amber-500">.</span>LAB
+                        <span class="text-lg font-black text-white tracking-tight block leading-none">
+                            VERDICT<span class="text-amber-500 font-black">TC</span><span class="text-slate-400 font-bold text-xs sm:text-sm">.com</span>
                         </span>
                         <span class="text-[10px] font-mono uppercase tracking-widest text-slate-400">
                             Physical Product Review Hub
@@ -98,7 +98,7 @@
                         <svg class="w-4 h-4 text-amber-400 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
                         </svg>
-                        <span>Press & Review Submissions: <a href="mailto:aihubinsider@gmail.com" class="text-white hover:text-amber-400 transition font-medium">editorial@verdictlab.com</a></span>
+                        <span>Press & Review Submissions: <a href="mailto:editorial@verdicttc.com" class="text-white hover:text-amber-400 transition font-medium">editorial@verdicttc.com</a></span>
                     </div>
                 </div>
             </div>
@@ -157,11 +157,11 @@
         <div class="pt-8 flex flex-col gap-4 text-xs text-slate-500 leading-relaxed">
             <div class="p-4 rounded-xl bg-slate-950/80 border border-slate-800/80 text-slate-400">
                 <strong class="text-amber-400 font-semibold">FTC Affiliate Disclosure:</strong>
-                VERDICT.LAB is reader-supported. When you buy physical products through retail links on our site (such as Amazon, Best Buy, Walmart, or B&H), we may earn an affiliate commission at <strong>no additional cost to you</strong>. Our laboratory test scores and editorial picks are 100% independent.
+                VERDICTTC.com is reader-supported. When you buy physical products through retail links on our site (such as Amazon, Best Buy, Walmart, or B&H), we may earn an affiliate commission at <strong>no additional cost to you</strong>. Our laboratory test scores and editorial picks are 100% independent.
             </div>
 
             <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 pt-2 text-slate-500">
-                <p>&copy; {{ date('Y') }} VERDICT.LAB LLC &bull; Washington, D.C., USA. All rights reserved.</p>
+                <p>&copy; {{ date('Y') }} VERDICTTC.com LLC &bull; Washington, D.C., USA. All rights reserved.</p>
                 <div class="flex items-center gap-4">
                     <a href="{{ route('pages.show', 'privacy-policy') }}" class="hover:text-slate-300 transition">Privacy</a>
                     <a href="{{ route('pages.show', 'terms-of-service') }}" class="hover:text-slate-300 transition">Terms</a>

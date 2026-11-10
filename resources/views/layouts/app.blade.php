@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="@yield('meta_description', 'GearLab Verdict — Independent Hands-On Physical Product Reviews, Lab Benchmarks, Comparisons & Verified Retail Deals')">
-    <title>@yield('title', 'GearLab Verdict — Lab-Tested Product Reviews & Daily Deals')</title>
+    <meta name="description" content="@yield('meta_description', 'VerdictTC.com — Independent Hands-On Physical Product Reviews, Lab Benchmarks, Comparisons & Verified Retail Deals')">
+    <title>@yield('title', 'VerdictTC.com — Lab-Tested Product Reviews & Daily Deals')</title>
 
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">

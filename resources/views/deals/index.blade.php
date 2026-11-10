@@ -20,7 +20,7 @@
                     Verified Hardware Deals & Exclusive Promo Codes
                 </h1>
                 <p class="text-slate-300 text-sm sm:text-base mt-2 max-w-2xl">
-                    Hand-picked retail price drops across Amazon, Best Buy, Walmart, and B&H Photo, vetted against 90-day price history by the Verdict Lab deals desk.
+                    Hand-picked retail price drops across Amazon, Best Buy, Walmart, and B&H Photo, vetted against 90-day price history by the VerdictTC deals desk.
                 </p>
             </div>
 

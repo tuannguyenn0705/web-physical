@@ -7,5 +7,5 @@
 @section('headline', 'Page Not Found')
 
 @section('message')
-The link you followed may be broken, moved, or no longer exists on AI Hub. Please check the URL or use the search bar to find what you are looking for.
+The link you followed may be broken, moved, or no longer exists on VerdictTC.com. Please check the URL or return to our homepage for our latest gear tests.
 @endsection

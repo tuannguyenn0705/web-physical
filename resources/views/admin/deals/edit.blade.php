@@ -73,7 +73,7 @@
                             Mã Giảm Giá (Tùy chọn)
                         </label>
                         <input type="text" name="coupon_code" id="coupon_code" value="{{ old('coupon_code', $deal->coupon_code) }}"
-                               placeholder="VD: CURSOR50"
+                               placeholder="VD: GEAR2026"
                                class="w-full px-4 py-2.5 border border-gray-200 rounded-xl text-sm font-mono uppercase text-gray-900 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-gray-900 focus:border-transparent">
                     </div>
                 </div>

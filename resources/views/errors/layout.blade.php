@@ -36,7 +36,7 @@
 
             <a href="{{ route('posts.index', ['type' => 'news']) }}" 
                class="inline-flex items-center px-4 py-2.5 bg-white hover:bg-gray-50 text-gray-700 border border-gray-200 rounded-xl text-xs sm:text-sm font-medium transition shadow-2xs">
-                Latest AI News
+                Latest Reviews &amp; News
             </a>
 
             <a href="javascript:history.back()" 
@@ -47,7 +47,7 @@
 
         {{-- Security footer note --}}
         <div class="mt-10 pt-6 border-t border-gray-100 text-xs text-gray-400">
-            <span>AI Hub 2026 Security Shield • All requests are safely monitored</span>
+            <span>VerdictTC.com Security Shield • Independent testing and access protected</span>
         </div>
     </div>
 </div>

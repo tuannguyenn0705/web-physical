@@ -24,7 +24,7 @@
         <div>
             <label for="name" class="block text-xs font-semibold uppercase tracking-wider text-gray-700 mb-1">Tên Danh Mục <span class="text-red-500">*</span></label>
             <input type="text" name="name" id="name" required value="{{ old('name') }}"
-                   placeholder="Ví dụ: AI Tools, ChatGPT..."
+                   placeholder="Ví dụ: Audio & Headphones, Mechanical Keyboards..."
                    class="w-full px-3.5 py-2 border border-gray-200 rounded-xl text-xs text-gray-900 focus:outline-none focus:ring-2 focus:ring-gray-900">
         </div>
 

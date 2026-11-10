@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title', 'VERDICT.LAB — Hands-On Physical Product Reviews, Lab Benchmarks & Daily Deals')
+@section('title', 'VerdictTC.com — Hands-On Physical Product Reviews, Lab Benchmarks & Daily Deals')
 @section('meta_description', 'Independent consumer hardware reviews, smart home benchmarks, ergonomic desk setup guides, and verified retail discounts across Amazon, Best Buy, and B&H.')
 
 @section('content')
@@ -305,7 +305,7 @@
                 </thead>
                 <tbody class="divide-y divide-slate-200/80 text-sm">
                     <tr class="bg-slate-50/70">
-                        <td class="py-4 px-6 font-bold text-slate-900">Verdict Lab Score</td>
+                        <td class="py-4 px-6 font-bold text-slate-900">VerdictTC Score</td>
                         <td class="py-4 px-6 bg-amber-50/40 border-x border-slate-200/80 font-mono font-black text-lg text-amber-600">9.8 / 10</td>
                         <td class="py-4 px-6 border-r border-slate-200/80 font-mono font-black text-lg text-slate-900">9.6 / 10</td>
                         <td class="py-4 px-6 font-mono font-black text-lg text-slate-900">9.4 / 10</td>
@@ -373,7 +373,7 @@
                 </thead>
                 <tbody class="divide-y divide-slate-200/80 text-sm">
                     <tr class="bg-slate-50/70">
-                        <td class="py-4 px-6 font-bold text-slate-900">Verdict Lab Score</td>
+                        <td class="py-4 px-6 font-bold text-slate-900">VerdictTC Score</td>
                         <td class="py-4 px-6 bg-amber-50/40 border-x border-slate-200/80 font-mono font-black text-lg text-amber-600">9.7 / 10</td>
                         <td class="py-4 px-6 border-r border-slate-200/80 font-mono font-black text-lg text-slate-900">9.6 / 10</td>
                         <td class="py-4 px-6 font-mono font-black text-lg text-slate-900">9.4 / 10</td>
@@ -435,7 +435,7 @@
                 </thead>
                 <tbody class="divide-y divide-slate-200/80 text-sm">
                     <tr class="bg-slate-50/70">
-                        <td class="py-4 px-6 font-bold text-slate-900">Verdict Lab Score</td>
+                        <td class="py-4 px-6 font-bold text-slate-900">VerdictTC Score</td>
                         <td class="py-4 px-6 bg-amber-50/40 border-x border-slate-200/80 font-mono font-black text-lg text-amber-600">9.8 / 10</td>
                         <td class="py-4 px-6 border-r border-slate-200/80 font-mono font-black text-lg text-slate-900">9.7 / 10</td>
                         <td class="py-4 px-6 font-mono font-black text-lg text-slate-900">9.3 / 10</td>

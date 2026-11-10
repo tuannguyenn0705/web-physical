@@ -22,6 +22,6 @@ class NewsletterController extends Controller
             ['is_active' => true]
         );
 
-        return back()->with('success', 'Thank you for subscribing! You will receive our weekly AI briefing and verified software deals.');
+        return back()->with('success', 'Thank you for subscribing! You will receive our weekly gear roundup, lab verdicts, and verified hardware deals.');
     }
 }

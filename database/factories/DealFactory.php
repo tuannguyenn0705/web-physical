@@ -15,7 +15,7 @@ class DealFactory extends Factory
     public function definition(): array
     {
         return [
-            'title' => fake()->numberBetween(20, 75).'%OFF at '.fake()->company().' AI',
+            'title' => fake()->numberBetween(10, 45).'% OFF '.fake()->company().' Gear',
             'description' => fake()->sentence(8),
             'image' => null,
             'affiliate_url' => fake()->url(),

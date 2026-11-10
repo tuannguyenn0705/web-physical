@@ -383,7 +383,7 @@
                         Loại Nội Dung <span class="text-red-500">*</span>
                     </label>
                     <select name="type" id="type" required class="w-full px-3.5 py-2.5 border border-gray-200 rounded-xl text-sm text-gray-900 bg-white focus:outline-none focus:ring-2 focus:ring-gray-900">
-                        <option value="news" {{ old('type') === 'news' ? 'selected' : '' }}>Tin tức AI</option>
+                        <option value="news" {{ old('type') === 'news' ? 'selected' : '' }}>Tin tức &amp; First Looks</option>
                         <option value="review" {{ old('type') === 'review' ? 'selected' : '' }}>Đánh giá (Review)</option>
                         <option value="tutorial" {{ old('type') === 'tutorial' ? 'selected' : '' }}>Hướng dẫn (Tutorial)</option>
                     </select>

@@ -39,7 +39,7 @@
                         Tiêu Đề Ưu Đãi (Title) <span class="text-red-500">*</span>
                     </label>
                     <input type="text" name="title" id="title" required value="{{ old('title') }}"
-                           placeholder="Ví dụ: 60%OFF at Cursor Pro AI hoặc 50%OFF ChatGPT Plus..."
+                           placeholder="Ví dụ: 25% OFF Sony WH-1000XM5 hoặc $50 OFF Keychron Q1 Pro..."
                            class="w-full px-4 py-2.5 border border-gray-200 rounded-xl text-sm font-medium text-gray-900 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-gray-900 focus:border-transparent">
                 </div>
 
@@ -49,7 +49,7 @@
                         Mô Tả Ngắn (Subtitle / Description)
                     </label>
                     <textarea name="description" id="description" rows="3"
-                              placeholder="Ví dụ: Best-selling AI coding assistant 60% off for annual plans..."
+                              placeholder="Ví dụ: Top-rated wireless noise cancelling headphones with direct Amazon discount..."
                               class="w-full px-4 py-2.5 border border-gray-200 rounded-xl text-sm text-gray-900 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-gray-900 focus:border-transparent leading-relaxed">{{ old('description') }}</textarea>
                 </div>
 
@@ -69,7 +69,7 @@
                             Mã Giảm Giá (Tùy chọn)
                         </label>
                         <input type="text" name="coupon_code" id="coupon_code" value="{{ old('coupon_code') }}"
-                               placeholder="VD: CURSOR50"
+                               placeholder="VD: GEAR2026"
                                class="w-full px-4 py-2.5 border border-gray-200 rounded-xl text-sm font-mono uppercase text-gray-900 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-gray-900 focus:border-transparent">
                     </div>
                 </div>

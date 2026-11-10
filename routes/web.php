@@ -18,7 +18,7 @@ use Illuminate\Support\Facades\Route;
 
 /*
 |--------------------------------------------------------------------------
-| Web Routes - AI Hub Insider
+| Web Routes - VerdictTC.com (Physical Product Reviews & Buying Guides)
 |--------------------------------------------------------------------------
 */
 
@@ -55,7 +55,7 @@ Route::post('/logout', [AuthController::class, 'logout'])->name('logout');
 
 // === ADMIN PANEL (yêu cầu đăng nhập) ===
 
-Route::prefix('admin')->name('admin.')->middleware(['auth'])->group(function () {
+Route::prefix('admin')->name('admin.')->middleware(['auth', 'admin.authorized'])->group(function () {
     // Dashboard
     Route::get('/', [DashboardController::class, 'index'])->name('dashboard');
 

@@ -3,6 +3,7 @@
 namespace Database\Seeders;
 
 use App\Models\Category;
+use App\Models\Comment;
 use App\Models\Post;
 use App\Models\Setting;
 use App\Models\Tag;
@@ -17,25 +18,30 @@ class DatabaseSeeder extends Seeder
      */
     public function run(): void
     {
-        // === 1. Create Editorial & Admin Users ===
-        $admin = User::firstOrCreate(
-            ['email' => 'adminaihub@gmail.com'],
-            [
-                'name' => 'Marcus Vance (Lead Hardware Engineer)',
+        // === 1. Create / Update Primary Admin User and Remove Others ===
+        $admin = User::where('email', 'verdictlab@gmail.com')->first() ?: User::first();
+        if ($admin) {
+            $admin->update([
+                'name' => 'VerdictTC Admin',
+                'email' => 'verdictlab@gmail.com',
                 'password' => bcrypt('Tuan2006@'),
                 'email_verified_at' => now(),
-            ]
-        );
-        $admin->update(['name' => 'Marcus Vance (Lead Hardware Engineer)']);
-
-        User::firstOrCreate(
-            ['email' => 'editorial@verdictlab.com'],
-            [
-                'name' => 'Elena Rostova (Senior Acoustic & Home Tester)',
-                'password' => bcrypt('password'),
+            ]);
+        } else {
+            $admin = User::create([
+                'name' => 'Verdict Lab Admin',
+                'email' => 'verdictlab@gmail.com',
+                'password' => bcrypt('Tuan2006@'),
                 'email_verified_at' => now(),
-            ]
-        );
+            ]);
+        }
+
+        // Reassign any existing posts & comments to the admin user before cleanup
+        Post::where('user_id', '!=', $admin->id)->update(['user_id' => $admin->id]);
+        Comment::where('user_id', '!=', $admin->id)->update(['user_id' => $admin->id]);
+
+        // Remove all other users so only verdictlab@gmail.com exists
+        User::where('id', '!=', $admin->id)->delete();
 
         // === 2. Create Physical Product Categories (E-Commerce & Affiliate Pillars) ===
         $categories = [
@@ -387,9 +393,9 @@ class DatabaseSeeder extends Seeder
         $this->call(PageSeeder::class);
 
         // === 7. Update Site Settings ===
-        Setting::set('site_name', 'VERDICT.LAB');
+        Setting::set('site_name', 'VerdictTC.com');
         Setting::set('site_description', 'Independent Physical Product Reviews, Lab Benchmarks, Comparisons & Verified Retail Deals');
         Setting::set('posts_per_page', '15');
-        Setting::set('contact_email', 'editorial@verdictlab.com');
+        Setting::set('contact_email', 'editorial@verdicttc.com');
     }
 }

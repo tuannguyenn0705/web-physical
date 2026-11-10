@@ -94,7 +94,7 @@
                     </div>
                     <div>
                         <div class="flex items-center gap-1.5">
-                            <span class="font-extrabold text-slate-900">{{ $post->author->name ?? 'Verdict Lab Editorial' }}</span>
+                            <span class="font-extrabold text-slate-900">{{ $post->author->name ?? 'VerdictTC Editorial' }}</span>
                             <span class="px-1.5 py-0.5 rounded bg-slate-100 text-slate-600 font-mono text-[10px] font-bold leading-none">Senior Hardware Tester</span>
                         </div>
                         <div class="text-xs text-slate-400 mt-0.5">
@@ -143,7 +143,7 @@
                              alt="{{ $post->title }}"
                              class="w-full h-full object-cover">
                         <span class="absolute bottom-3 right-3 px-2.5 py-1 rounded-lg bg-slate-950/80 backdrop-blur-md text-[10px] font-mono text-white">
-                            Hands-On Photo at Verdict Lab
+                            Hands-On Photo at VerdictTC Lab
                         </span>
                     </div>
                     <figcaption class="px-5 py-3 bg-slate-50 border-t border-slate-200/80 text-xs text-slate-500 flex items-center justify-between">

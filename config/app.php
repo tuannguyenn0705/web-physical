@@ -13,7 +13,9 @@ return [
     |
     */
 
-    'name' => env('APP_NAME', 'Laravel'),
+    'name' => env('APP_NAME', 'VerdictTC.com'),
+
+    'admin_email' => env('ADMIN_EMAIL', 'verdictlab@gmail.com'),
 
     /*
     |--------------------------------------------------------------------------

@@ -81,8 +81,8 @@
                 </div>
                 <div class="flex flex-col">
                     <div class="flex items-center gap-2">
-                        <span class="text-lg sm:text-xl font-extrabold tracking-tight text-slate-900 leading-none whitespace-nowrap">
-                            VERDICT<span class="text-amber-500">.</span>LAB
+                        <span class="text-lg sm:text-xl font-black tracking-tight text-slate-900 leading-none whitespace-nowrap">
+                            VERDICT<span class="text-amber-500 font-black">TC</span><span class="text-slate-400 font-bold text-xs sm:text-sm">.com</span>
                         </span>
                         <span class="hidden sm:inline-block px-1.5 py-0.5 text-[9px] font-mono font-bold uppercase tracking-widest bg-slate-100 text-slate-700 border border-slate-200 rounded whitespace-nowrap">
                             GEAR & DEALS

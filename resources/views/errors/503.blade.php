@@ -7,5 +7,5 @@
 @section('headline', 'Scheduled System Maintenance')
 
 @section('message')
-AI Hub 2026 is currently performing a database upgrade and performance optimization to deliver a faster, safer experience. We will be back online shortly.
+VerdictTC.com is currently performing scheduled database optimization and hardware benchmark synchronization. We will be back online shortly.
 @endsection
